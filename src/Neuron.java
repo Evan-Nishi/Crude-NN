@@ -1,4 +1,4 @@
-package src;
+import utils.vecMath;
 public class Neuron {
     double bias;
     double[] inputs;
@@ -17,16 +17,9 @@ public class Neuron {
     
     public double outPut(){
         double output = 0;
-        if(this.inputs.length == this.weights.length){
-            for(int i = 0; i < this.inputs.length; i++){
-                output += (this.inputs[i] * this.weights[i]);
-            }
-            
-            output += this.bias;
-            return output;
-        } else {
-            System.out.println("Error: number of inputs and weights don't match");
-            return 0;
-        }
+        output = vecMath.dotProduct(this.inputs, this.weights);
+        output += this.bias;
+        return output;
+
     }
 }

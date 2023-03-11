@@ -1,4 +1,4 @@
-package src;
+
 import java.util.ArrayList;
 
 public class Layer {
@@ -15,4 +15,6 @@ public class Layer {
         }
         return layerOutput;
     }
+
+    //make batch funct
 }

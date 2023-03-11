@@ -1,6 +1,3 @@
-import src.Neuron;
-import src.Layer;
-
 
 public class Main{
     public static void main(String[] args){
