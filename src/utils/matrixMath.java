@@ -13,12 +13,24 @@ public class matrixMath {
         return res;
     }
     public static double[][] transpose(double[][] arr){
+        System.out.println(arr.length);
+        System.out.println(arr[0].length);
         double[][] res = new double[arr[0].length][arr.length];
             for(int i = 0; i < arr.length; i++){
                 for(int j = 0; j < arr[i].length; j++){
-                    res[i][j] = arr[j][i];
+                    res[j][i] = arr[i][j];
                 }
             }
         return res;
+    }
+
+    public static void printMatrix(double[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print("[");
+            for (int j = 0; j < arr[i].length; j++){
+                System.out.print(arr[i][j] + ", ");
+            }
+            System.out.println("],");
+        }
     }
 }
