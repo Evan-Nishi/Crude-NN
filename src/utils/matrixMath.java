@@ -5,8 +5,8 @@ public class matrixMath {
         double[][] res = new double[x.length][y[0].length];
         for(int i = 0; i < x.length; i++){
             for(int j = 0; j < y[i].length; j++){
-                for(int k = 0; k < y.length; k++){
-                    res[i][j] += (x[i][j] * y[i][j]);
+                for(int k = 0; k < x[0].length; k++){
+                    res[i][j] += (x[i][k] * y[k][j]);
                 }
             }
         }
